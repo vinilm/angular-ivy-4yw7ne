@@ -4,7 +4,13 @@ import { NgModel } from "@angular/forms";
 @Component({
   selector: "hello",
   template: `
-    <div [ngClass]="{ bold: isBold, strike: isStrike, highlight: isHighlight }">
+    <div
+      [ngClass]="{
+        bold: isBold,
+        strike: isStrike,
+        highlight: isHighlight
+      }"
+    >
       <h1>Hello {{ name }}!</h1>
       <p>
         <input type="checkbox" [(ngModel)]="isBold" />Bold
@@ -22,8 +28,9 @@ import { NgModel } from "@angular/forms";
         font-weight: bold;
       }
       .highlight {
-        background-color: cyan;
+        background-color: lavender;
       }
+
       .strike {
         text-decoration: line-through;
       }
